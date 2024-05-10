@@ -1,0 +1,155 @@
+/* ====================================
+|-------LITTLE CSS RESET---------------|
+====================================== */
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  height: 100%;
+  min-height: 100vh;
+  font-family: "Work Sans", sans-serif;
+  background-color: var(--lightPink);
+}
+
+html {
+  font-size: 16px;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+html {
+  font-size: 16px;
+}
+
+/* ==================================================
+|-------COLOURS NEEDED FOR THE WEBPAGE---------------|
+====================================================*/
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --lightPink: hsl(275, 100%, 97%);
+  --grayishPurple: hsl(292, 16%, 49%);
+  --darkPurple: hsl(292, 42%, 14%);
+}
+
+/* ===================================
+|-------STYLES FOR THE ACCORDION------|
+=====================================*/
+.background-image-container {
+  background-image: url(./assets/images/background-pattern-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 232px;
+}
+
+main {
+  position: relative;
+}
+
+.faq-accordion {
+  background-color: var(--white);
+  color: var(--darkPurple);
+
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 0 1rem;
+  position: relative;
+  top: -85px;
+}
+
+.faq-accordion-container {
+  margin: 0 auto;
+  max-width: 32rem;
+}
+
+.faq-accordion > h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.faq-accordion > h2::before {
+  content: url(./assets/images/icon-star.svg);
+  vertical-align: middle;
+  margin-right: 1.5rem;
+}
+
+.faq-question {
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: hsl(292, 42%, 14%);
+  padding-block: 1.5rem;
+  cursor: pointer;
+}
+
+.faq-question h3 {
+  font-size: 1rem;
+  max-width: 224px;
+}
+
+.faq-item {
+  border-bottom: 1px solid hsl(292, 16%, 49%);
+}
+
+.faq-answer {
+  color: var(--grayishPurple);
+  visibility: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.showFaqAnswer {
+  visibility: visible;
+  max-height: 200px;
+  opacity: 1;
+  margin-block: 1rem;
+}
+
+@media (min-width: 576px) {
+  .background-image-container {
+    background-image: url(./assets/images/background-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 320px;
+  }
+
+  .faq-question h3 {
+    max-width: none;
+  }
+
+  .faq-accordion-container {
+    max-width: 35rem;
+  }
+
+  .faq-accordion {
+    /* padding-right: 1.5rem;
+    padding-left: 1.5rem; */
+    top: -105px;
+  }
+}
