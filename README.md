@@ -31,7 +31,7 @@ Users should be able to:
 ### Links
 
 [solution URL](https://github.com/Malik-Muhammed/faq-accordion)
-[live site URL](https://your-live-site-url.com)
+[live site URL](https://malik-muhammed.github.io/faq-accordion/)
 
 ### Built with
 
